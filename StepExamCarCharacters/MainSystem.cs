@@ -40,7 +40,7 @@ namespace StepExamCarCharacters
                 {
                     List<Modification> modif = mod.Modifications.Where(n => n.Colors.Exists(c => c.Name.Contains(color))).ToList();
 
-                    if(modif==null)
+                    if(modif.Count == 0)
                     {
                         Console.WriteLine(" No one model with this color of modification wasn`t founded!");
                     }
